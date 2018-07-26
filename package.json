@@ -1,0 +1,48 @@
+{
+  "name": "next-js-skeleton",
+  "version": "1.0.0",
+  "description": "NextJS Skeleton",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "cross-env ANALYZE=1 next build",
+    "app": "node server",
+    "build": "next build",
+    "dev": "next",
+    "eslint": "./node_modules/.bin/eslint pages/ components/ libs/",
+    "export": "next export",
+    "start": "npm run production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "NODE_ENV=production node server.js"
+  },
+  "keywords": [
+    "react",
+    "nextjs"
+  ],
+  "author": "Muhammad K. Huda",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "busyman": "^0.3.0",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
+    "dayjs": "^1.7.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "frisbee": "^2.0.5",
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^6.1.1",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0",
+    "react-lazyload": "^2.3.0",
+    "webpack-bundle-analyzer": "^2.13.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}
