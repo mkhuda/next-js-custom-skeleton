@@ -7,6 +7,7 @@
 ### Requirements
 - Node Version 8.11.+
 - NPM or Yarn (But I recommend using NPM)
+- Docker & Docker Compose
 
 ## How to use
 
