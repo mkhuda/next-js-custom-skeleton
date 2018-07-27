@@ -8,8 +8,6 @@ const app = next({ dev })
 const handlePage = app.getRequestHandler()
 
 // configuration
-const apiHost = 'https://example.apihost.com'
-
 app.prepare()
   .then(() => {
     const appServer = express()

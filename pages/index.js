@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { withRouter } from 'next/router'
 import HelmetMeta from '../components/HelmetMeta'
 import MainLayout from '../layouts/MainLayout'
@@ -34,5 +35,4 @@ class Index extends React.Component {
   }
 }
 
-
-export default withRouter(Index)
+export default connect(state => state)(withRouter(Index))
