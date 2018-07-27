@@ -1,6 +1,6 @@
 const Footer = () => (
   <footer>
-    <p>Brimob Dashboard v-1</p>
+    <p>Footer Sample</p>
     <style jsx>{`
       footer {
         color: #acb3c2;
