@@ -19,6 +19,13 @@ app.prepare()
     appServer.use((req, res, next) => {
       next()
     })
+    appServer.get('/:page', (request, response) => {
+      const originPage = `/${request.params.page}`
+      const queryParams = {
+        page: `${request.params.page}`
+      }
+      app.render(request, response, originPage, queryParams)
+    })
 
     appServer.get('/:page/:subpage*?', (request, response) => {
       const originPage = `/${request.params.page}/${request.params.subpage}`

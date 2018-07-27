@@ -1,9 +1,11 @@
 import React from 'react'
 import { withRouter } from 'next/router'
-import HelmetMeta from '../components/HelmetMeta'
-import MainLayout from '../layouts/MainLayout'
+import UserList from '../../components/user/UserList'
+import ALink from '../../components/ALink'
+import HelmetMeta from '../../components/HelmetMeta'
+import MainLayout from '../../layouts/MainLayout'
 
-class User extends React.Component {
+class All extends React.Component {
   static async getInitialProps() {
     return {}
   }
@@ -20,7 +22,9 @@ class User extends React.Component {
         <HelmetMeta title='Home'/>
         <div className='columns'>
           <div className='column col-6 col-mx-auto col-xs-9'>
-            <h1>User</h1>
+            <ALink name='Home'/> <br />
+            <ALink name='Go to User Page' page='user'/> <br />
+            <UserList />
           </div>
         </div>
 
@@ -35,5 +39,6 @@ class User extends React.Component {
 }
 
 
-export default withRouter(User)
+export default withRouter(All)
+
 

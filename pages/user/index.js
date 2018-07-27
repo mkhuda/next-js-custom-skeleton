@@ -1,8 +1,8 @@
 import React from 'react'
 import { withRouter } from 'next/router'
-import HelmetMeta from '../components/HelmetMeta'
-import MainLayout from '../layouts/MainLayout'
-import ALink from '../components/ALink'
+import HelmetMeta from '../../components/HelmetMeta'
+import ALink from '../../components/ALink'
+import MainLayout from '../../layouts/MainLayout'
 
 class Index extends React.Component {
   static async getInitialProps() {
@@ -21,9 +21,9 @@ class Index extends React.Component {
         <HelmetMeta title='Home'/>
         <div className='columns'>
           <div className='column col-6 col-mx-auto col-xs-9'>
-            <ALink name='Go to User Page' page='user'/> <br />
+            <ALink name='Home'/> <br />
             <ALink name='Go to User All Page' page='user' subpage='all'/>
-            <h1>Halo</h1>
+            <h1>Index</h1>
           </div>
         </div>
 
@@ -39,3 +39,4 @@ class Index extends React.Component {
 
 
 export default withRouter(Index)
+
