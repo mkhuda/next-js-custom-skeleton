@@ -34,6 +34,15 @@ npm run build
 yarn build
 ```
 
+### Docker build production
+```bash
+# build
+docker build -t next-app .
+docker-compose up -d
+```
+
+Default host are http://localhost:3000
+
 Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
 
 ```bash
