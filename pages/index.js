@@ -1,8 +1,9 @@
 import React from 'react'
 import { withRouter } from 'next/router'
+import compose from 'lodash/fp/compose'
+import { Link } from '../routes'
 import HelmetMeta from '../components/HelmetMeta'
-import MainLayout from '../layouts/MainLayout'
-import ALink from '../components/ALink'
+import MainLayout from '../components/layouts/MainLayout'
 
 class Index extends React.Component {
   static async getInitialProps() {
@@ -21,8 +22,12 @@ class Index extends React.Component {
         <HelmetMeta title='Home'/>
         <div className='columns'>
           <div className='column col-6 col-mx-auto col-xs-9'>
-            <ALink name='Go to User Page' page='user'/> <br />
-            <ALink name='Go to User All Page' page='user' subpage='all'/>
+            <Link route='/user'>
+              <a>User Page</a>
+            </Link>
+            <Link route='/user/all'>
+              <a>User All Page</a>
+            </Link>
             <h1>Halo</h1>
           </div>
         </div>
@@ -38,4 +43,4 @@ class Index extends React.Component {
 }
 
 
-export default withRouter(Index)
+export default compose(withRouter)(Index)

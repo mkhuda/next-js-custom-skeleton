@@ -1,9 +1,10 @@
 import React from 'react'
 import { withRouter } from 'next/router'
+import compose from 'lodash/fp/compose'
+import { Link } from '../../routes'
 import UserList from '../../components/user/UserList'
-import ALink from '../../components/ALink'
 import HelmetMeta from '../../components/HelmetMeta'
-import MainLayout from '../../layouts/MainLayout'
+import MainLayout from '../../components/layouts/MainLayout'
 
 class All extends React.Component {
   static async getInitialProps() {
@@ -22,8 +23,12 @@ class All extends React.Component {
         <HelmetMeta title='Home'/>
         <div className='columns'>
           <div className='column col-6 col-mx-auto col-xs-9'>
-            <ALink name='Home'/> <br />
-            <ALink name='Go to User Page' page='user'/> <br />
+            <Link route='/'>
+              <a>Home Page</a>
+            </Link>
+            <Link route='/user'>
+              <a>User Page</a>
+            </Link>
             <UserList />
           </div>
         </div>
@@ -39,6 +44,6 @@ class All extends React.Component {
 }
 
 
-export default withRouter(All)
+export default compose(withRouter)(All)
 
 
