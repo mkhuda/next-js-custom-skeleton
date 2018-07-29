@@ -1,14 +1,19 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const next = require('next')
+const mobxReact = require('mobx-react')
+const { parse } = require('url')
 const routes = require('./routes')
 
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handlePage = routes.getRequestHandler(app, ({req, res, route, query}) => {
-  app.render(req, res, route.page, query)
+  const parsedUrl = parse(req.url, true)
+  app.render(req, res, route.page, query, parsedUrl)
 })
+
+mobxReact.useStaticRendering(true)
 
 app.prepare()
   .then(() => {
