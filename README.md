@@ -1,6 +1,10 @@
 # next-js skeleton
 
 > This skeleton and documentation is based on the [next-js](https://github.com/zeit/next.js/).
+## Examples
+- Basic on `basic` branch
+- Using Mobx as State Management on `with-mobx` branch (Recommended Usages)
+- Using Redux + Redux-Saga on `redux-saga` branch (BETA)
 
 ## Prerequisite
 
